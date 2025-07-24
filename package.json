@@ -7,7 +7,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npm rebuild esbuild"
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.2",
