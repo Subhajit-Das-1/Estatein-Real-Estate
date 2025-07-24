@@ -56,15 +56,13 @@ Welcome to **Estatein**, a modern, full-stack real estate website that provides 
 - 🛡️ bcryptjs for password hashing
 - 📦 Vercel (Frontend hosting)
 
----
-
 ## 📁 Project Structure
 
 real-estate-website/
 ├── client/ # React frontend
 │ ├── components/
-│ ├── pages/
-│ └── App.jsx
+│ └── pages/
+├── App.jsx
 ├── server.js # Express backend
 ├── models/ # Mongoose models
 ├── routes/ # Express routes
