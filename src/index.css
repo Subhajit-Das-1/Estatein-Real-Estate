@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@theme {
+  --color-grey-08: #141414;
+  --color-grey-10: #1a1a1a;
+  --color-grey-15: #262626;
+  --color-grey-20: #333333;
+  --color-grey-30: #4d4d4d;
+  --color-grey-60: #999999;
+
+  --font-urbanist: "Urbanist", sans-serif;
+}
+
+body {
+  @apply bg-grey-08 text-grey-60 font-urbanist;
+}
+@layer utilities {
+  .container {
+    @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1130px] 2xl:max-w-[1340px];
+  }
+  p {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  .section {
+    @apply pt-20 md:pt-[100px] lg:mt-32;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold leading-tight text-balance;
+  }
+  h2 {
+    @apply text-3xl text-white;
+  }
+  h4 {
+    @apply text-xl font-semibold text-white;
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-grey-08 px-6 py-3 border border-grey-20 rounded-md block hover:bg-grey-20 transition-colors;
+  }
+  .secondary-btn {
+    @apply bg-purple-600 text-white px-6 py-3 rounded-md block hover:bg-purple-600/85 transition-colors;
+  }
+}
+
+/* Header */
+.navbar {
+  @apply fixed top-0 left-0 bg-grey-10/85 backdrop-blur-lg w-full h-screen flex items-center justify-center -translate-y-full flex-col transition-transform duration-300 z-40;
+}
+
+.navbar.active {
+  @apply translate-y-0;
+}
+
+/* Hero */
+.text-shape {
+  animation: rotate linear infinite 15s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
